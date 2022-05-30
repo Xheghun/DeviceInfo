@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DeviceInfo</string>
+    <string name="scan_device">Scan Device</string>
+</resources>
