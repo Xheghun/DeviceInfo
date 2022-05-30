@@ -16,18 +16,113 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="My Device Info" />
 
-    <LinearLayout
-        android:id="@+id/device_details_layout"
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/info_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/device_details_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="28dp"
+                android:paddingVertical="12dp">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/titleTextStyle"
+                    android:text="@string/device"/>
+
+                <TextView
+                    android:id="@+id/device_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Details"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/camera_details_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="28dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/titleTextStyle"
+                    android:text="@string/camera"/>
+
+                <TextView
+                    android:id="@+id/camera_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Detail"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bluetooth_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="28dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/titleTextStyle"
+                    android:text="@string/bluetooth"/>
+
+                <TextView
+                    android:id="@+id/bluetooth_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bluetooth"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wifi_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="28dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/titleTextStyle"
+                    android:text="Wifi"/>
+
+                <TextView
+                    android:id="@+id/wifi_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Details"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/scanButton"

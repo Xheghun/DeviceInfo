@@ -5,12 +5,22 @@ data class DeviceInfo(
     val model: String,
     val carrier: String,
     val locale: String,
-    val manufactureDate: String,
-    val buildNumber: String,
-    val storageCapacity: String,
-    val macAddress: String,
     val processorName: String,
-    val ipAddress: String,
-    val IMEI: String,
-    val connectedHardware: List<Hardware>
-    )
+    val osVersion: String,
+    val date: String,
+    val camera: List<String>,
+    val bluetooth: String,
+    val wifi: String
+    ) {
+
+
+     fun fInfo(): String {
+        return "Name: ${name}\n" +
+                "Model: ${model}\n" +
+                "Board: ${processorName}\n" +
+                "OS: ${osVersion}\n" +
+                "Carrier: ${carrier}\n" +
+                "Locale: ${locale}\n" +
+                "Build Date: ${date}"
+    }
+}

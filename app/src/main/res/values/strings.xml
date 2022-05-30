@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DeviceInfo</string>
     <string name="scan_device">Scan Device</string>
+    <string name="device">Device</string>
+    <string name="camera">Camera</string>
+    <string name="bluetooth">Bluetooth</string>
 </resources>
