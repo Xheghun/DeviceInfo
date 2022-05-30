@@ -11,6 +11,7 @@ import android.os.Build
 import android.telephony.TelephonyManager
 import android.util.Log
 import com.xheghun.deviceinfo.model.entities.DeviceInfo
+import java.io.File
 import java.util.*
 
 /**
@@ -20,6 +21,7 @@ import java.util.*
  * */
 class DeviceInfoService(private val context: Context) {
 
+    val fileName = "deviceInfo.txt";
 
     private val telephonyManager: TelephonyManager =
         (context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager)
@@ -129,7 +131,7 @@ class DeviceInfoService(private val context: Context) {
                 getDeviceInfo().wifi
 
 
-        context.openFileOutput("deviceInfo", Context.MODE_PRIVATE).use {
+        context.openFileOutput(fileName, Context.MODE_PRIVATE).use {
             output ->
             output.write(info.toByteArray())
             Log.i("DeviceInfoService", "Saved $info")
